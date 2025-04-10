@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work</title>
+    <title>Gradient Background with Images</title>
+    <style>
+        body {
+            justify-content: center;
+            
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
+            background:radial-gradient(at center,rgb(245, 228, 231),rgb(153, 202, 214));
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+
+        .image {
+            width: 500px; /* 調整圖片大小 */
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left {
+            background-image: url('1.png'); /* 左邊去背圖片 */
+        }
+
+        .right {
+            background-image: url('2.png'); /* 右邊去背圖片 */
+        }
+    </style>
 </head>
-<style>
-    #調亮 {
-        width: 300px;
-        height: 300px;
-        background-repeat: repeat-x;
-        background: url(1.png);
-        background-size: round;
-        filter: brightness(0.8) ;
-
-    }
-
-    bg{    
-        background:radial-gradient(at top,pink,blue);
-    }
-</style>
 <body>
-    <div>bg</div>
-    <div id="調亮"></div>
-
+    <div class="container">
+        <div class="image left"></div>
+        <div class="image right"></div>
+    </div>
 </body>
 </html>
